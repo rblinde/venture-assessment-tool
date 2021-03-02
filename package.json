@@ -1,0 +1,26 @@
+{
+  "name": "venture-assessment-tool",
+  "version": "1.0.0",
+  "description": "Assessment tool for start-ups",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "parcel public/*.html",
+    "build": "parcel build public/*.html"
+  },
+  "keywords": [
+    "assessment",
+    "tool",
+    "startups",
+    "entrepreneurship"
+  ],
+  "author": "rblinde",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "chart.js": "^2.9.4",
+    "jspdf": "^2.3.0",
+    "rangeslider.js": "^2.3.3"
+  }
+}

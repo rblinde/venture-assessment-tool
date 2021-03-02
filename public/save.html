@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Start-up Assessment Tool</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+
+  <meta name="description" content="Online tool to assess the potential of start-ups.">
+  <link rel="canonical" href="https://startup-assessment-tool.netlify.app">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="apple-mobile-web-app-title" content="Start-up Assessment Tool">
+  <meta name="application-name" content="Start-up Assessment Tool">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:url" content="https://startup-assessment-tool.netlify.app">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Start-up Assessment Tool">
+  <meta property="og:description" content="Online tool to assess the potential of start-ups.">
+  <meta property="og:image" content="https://startup-assessment-tool.netlify.app/feedback.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta name="twitter:card" content="summary">
+  </meta>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="title">Start-up Assessment Tool</h1>
+    <p>
+      Assessment tool to assess the potential success of start-up ventures.<br>
+      This tool helps providing relevant feedback on their business model and presentation.<br>
+      <a href="saves.html">Back to Saves</a>
+    </p>
+  </header>
+
+  <main class="container">
+    <section class="section results show">
+      <div class="button-group">
+        <button type="button" class="btn btn-small btn-delete">Delete</button>
+      </div>
+
+      <header>
+        <h2 class="name">Results</h2>
+        <p>Here you will find relevant feedback and visualisations to gain insights in the start-up.</p>
+      </header>
+
+      <h3 class="summary">Feedback</h3>
+      <div class="feedback"></div>
+
+      <div class="radar-chart">
+        <h3>Main Aspects</h3>
+        <canvas width="400" height="400" id="chart"></canvas>
+      </div>
+
+      <div class="r-grid">
+        <div>
+          <h3>Desirability</h3>
+          <canvas width="400" height="400" id="chart-desirability"></canvas>
+        </div>
+        <div>
+          <h3>Financial Feasibility</h3>
+          <canvas width="400" height="400" id="chart-finance"></canvas>
+        </div>
+        <div>
+          <h3>Ambition &amp; Presentation</h3>
+          <canvas width="400" height="400" id="chart-ambition"></canvas>
+        </div>
+        <div>
+          <h3>Competition</h3>
+          <canvas width="400" height="400" id="chart-competition"></canvas>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+        <path
+          d="m35 35h12.785a5.145 5.145 0 0 1 5.191 4.509 5 5 0 0 1 -4.976 5.491c7.18 0 13-2 13-10v-23a3 3 0 0 0 -3-3h-23a4 4 0 0 0 -4 4v18a4 4 0 0 0 4 4z"
+          fill="#e32210" />
+        <path
+          d="m34 3h-28a3 3 0 0 0 -3 3v22c0 8 5.82 10 13 10a5 5 0 0 1 -4.977-5.491 5.145 5.145 0 0 1 5.192-4.509h17.785a3 3 0 0 0 3-3v-19a3 3 0 0 0 -3-3z"
+          fill="#10bde0" />
+        <path d="m39 53-5.106 2.553a4.236 4.236 0 0 1 -3.788 0l-5.106-2.553a4 4 0 0 0 -4 4v5h22v-5a4 4 0 0 0 -4-4z"
+          fill="#d9d9d9" />
+        <path d="m43 14a2 2 0 0 0 -2 2v5a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v3a2 2 0 0 0 4 0v-3a2 2 0 0 1 2-2h1v-9z"
+          fill="#fff5e0" />
+        <path
+          d="m23.573 37.866a8.961 8.961 0 0 0 5.427 11.611v.523c0 2.209-1.791 3-4 3l5.106 2.553a4.236 4.236 0 0 0 3.788 0l5.106-2.553c-2.209 0-4-.791-4-3v-.523a8.994 8.994 0 0 0 6-8.765c-.007-.24.011-.476-.016-.712h-11.984a7.966 7.966 0 0 1 -5.427-2.134z"
+          fill="#fff5e0" />
+        <path
+          d="m23.573 37.866a7.966 7.966 0 0 0 5.427 2.134h11.979a7.982 7.982 0 0 0 -7.979-8h-12a7.97 7.97 0 0 0 2.573 5.866z"
+          fill="#6b4a08" />
+        <path d="m25 14h-1a2 2 0 0 1 -2-2v-3a2 2 0 0 0 -4 0v3a2 2 0 0 1 -2 2h-1v9h10a2 2 0 0 0 2-2v-5a2 2 0 0 0 -2-2z"
+          fill="#fff5e0" />
+        <path d="m15 13h-4v11h4v-1-9z" fill="#d9d9d9" />
+        <path d="m57 24v-11h-4v1 9 1z" fill="#d9d9d9" />
+        <path
+          d="m58 8h-20v-2a4 4 0 0 0 -4-4h-28a4 4 0 0 0 -4 4v22c0 11 10.537 11 14 11a1 1 0 0 0 0-2 4 4 0 0 1 -3.981-4.4 4.149 4.149 0 0 1 4.2-3.6h13.781v2h-9a1 1 0 0 0 -1 1 8.96 8.96 0 0 0 2.435 6.137 9.867 9.867 0 0 0 -.435 2.863 10.012 10.012 0 0 0 6 9.155c-.022.6-.267 1.845-3 1.845a5.006 5.006 0 0 0 -5 5v5h2v-5a2.994 2.994 0 0 1 2.8-2.98l4.856 2.427a5.24 5.24 0 0 0 1.344.453v5.1h2v-5.1a5.259 5.259 0 0 0 1.342-.448l4.858-2.432a2.994 2.994 0 0 1 2.8 2.98v5h2v-5a5.006 5.006 0 0 0 -5-5c-2.73 0-2.976-1.247-3-1.844a9.964 9.964 0 0 0 6-9.476v-.223c0-.15-.006-.3-.017-.448v-.009a8.958 8.958 0 0 0 -.947-4h6.753a4.149 4.149 0 0 1 4.2 3.6 4 4 0 0 1 -3.989 4.4 1 1 0 0 0 0 2c3.463 0 14 0 14-11v-23a4 4 0 0 0 -4-4zm-47.972 24.414a6.04 6.04 0 0 0 1.172 4.179c-4.945-.976-7.2-3.734-7.2-8.593v-22a2 2 0 0 1 2-2h28a2 2 0 0 1 2 2v19a2 2 0 0 1 -2 2h-17.785a6.163 6.163 0 0 0 -6.187 5.414zm22.972.586a7 7 0 0 1 6.908 6h-10.908a7.011 7.011 0 0 1 -6.929-6zm1.667 15.534a1 1 0 0 0 -.667.943v.523a3.582 3.582 0 0 0 2.012 3.376l-2.564 1.282a3.293 3.293 0 0 1 -2.895 0l-2.565-1.282a3.582 3.582 0 0 0 2.012-3.376v-.523a1 1 0 0 0 -.667-.943 8.012 8.012 0 0 1 -5.333-7.534 7.757 7.757 0 0 1 .136-1.439 8.943 8.943 0 0 0 4.864 1.439h10.984a7.964 7.964 0 0 1 -5.317 7.534zm25.333-13.534c0 4.859-2.255 7.617-7.195 8.593a6.04 6.04 0 0 0 1.167-4.179 6.163 6.163 0 0 0 -6.187-5.414h-8.111a8.942 8.942 0 0 0 -6.674-3h-1v-2h2a4 4 0 0 0 4-4v-15h20a2 2 0 0 1 2 2z" />
+        <path
+          d="m25 13h-1a1 1 0 0 1 -1-1v-3a3 3 0 0 0 -6 0v3a1 1 0 0 1 -1 1 1 1 0 0 0 -1-1h-4a1 1 0 0 0 -1 1v11a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h9a3 3 0 0 0 3-3v-5a3 3 0 0 0 -3-3zm-11 10h-2v-9h2zm12-2a1 1 0 0 1 -1 1h-9v-7a3 3 0 0 0 3-3v-3a1 1 0 0 1 2 0v3a3 3 0 0 0 3 3h1a1 1 0 0 1 1 1z" />
+        <path
+          d="m57 12h-4a1 1 0 0 0 -1 1h-9a3 3 0 0 0 -3 3v5a3 3 0 0 0 3 3h1a1 1 0 0 1 1 1v3a3 3 0 0 0 6 0v-3a1 1 0 0 1 1-1 1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-11a1 1 0 0 0 -1-1zm-8 13v3a1 1 0 0 1 -2 0v-3a3 3 0 0 0 -3-3h-1a1 1 0 0 1 -1-1v-5a1 1 0 0 1 1-1h9v7a3 3 0 0 0 -3 3zm7-2h-2v-9h2z" />
+        <path d="m39 28h4v2h-4z" />
+        <path d="m29 6h-2v1h-1v2h1v1h2v-1h1v-2h-1z" />
+      </svg>
+
+      <p>Assessment tool as assignment for the Entrepreneurship course at Leiden University.</p>
+
+      <div>Icon made by <a href="https://www.flaticon.com/authors/ddara" title="dDara">dDara</a> from <a
+          href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </div>
+  </footer>
+
+  <script src="./../src/save.js" async=""></script>
+</body>
+
+</html>
